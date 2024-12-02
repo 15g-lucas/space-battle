@@ -1,0 +1,338 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Arial, 'sans-serif';
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 960px;
+    height: 600px;
+    background-image: url("assets/images/background-1.jpg");
+}
+
+.info-bar{
+    z-index: 60;
+    background: #919191;
+    width: 80%;
+    margin-top: 20px;
+    height:     px;
+    border-radius: 30px;
+    text-align: center;
+    justify-content: space-around;
+}
+.game-zone{
+    position: relative;
+    margin-top: -70px;
+    width: 100%;
+    height: 600px;
+}
+.my-space-ctn{
+    top: 0;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 120px;
+    width: 180px;
+    background-position: 0 -30px;
+    background-image: url("assets/images/ship_4.png");
+    animation: bounce 5s infinite;
+}
+.asteroids-ctn{
+    z-index: 20;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.asteroid{
+    position: absolute;
+    bottom: 0;
+    background-image: url("assets/images/aestroid_brown.png");
+    background-size: contain;
+    height: 85px;
+    width: 85px;
+}
+
+.enemy-space-ctn{
+    z-index: 20;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.enemy_space{
+    position: absolute;
+    bottom: 0;
+    background-size: cover;
+    background-image: url("assets/images/ship_3.png");
+    height: 80px;
+    width: 80px;
+}
+
+.friendly-space-ctn{
+    z-index: 20;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+
+}
+
+.virtual-dom{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    flex-direction: column;
+    justify-self: end;
+}
+
+.friendly_space{
+    position: absolute;
+    bottom: 0;
+    background-image: url("assets/images/ship_2.png");
+    height: 80px;
+    width: 80px;
+}
+
+.fuel-fill{
+    z-index: 30;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    width: 30px;
+    height: 180px;
+    background: lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding-top: 5px;
+}
+
+.fuel{
+    text-align: center;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    background: #aaaaaa;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+
+
+.fuelpopm{
+    background: red;
+    transition: background-color 0.3s;
+}
+
+.fuelpopp{
+    background: green;
+    transition: background-color 0.3s;
+}
+
+
+
+
+.munition{
+    position: absolute;
+    background: violet;
+    width: 30px;
+    height : 10px;
+}
+
+.enemy_munition{
+    position: absolute;
+    background: palevioletred;
+    width: 30px;
+    height : 10px;
+}
+
+
+.game_over{
+    font-size: 35px;
+    color: white;
+    margin-top: -10px;
+    z-index: 70;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,1);
+    width: 960px;
+    height: 600px;
+}
+
+.game_over>*{
+    margin-bottom: 15px;
+}
+
+.welcome{
+    font-size: 25px;
+    color: white;
+    z-index: 60 ;
+    margin-top: -10px;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,1);
+    width: 960px;
+    height: 600px;
+}
+
+.pause{
+    z-index: 60;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.3);
+    width: 960px;
+    height: 590px;
+}
+
+.sensitives_areas{
+    /*transform: rotate(45deg) translate(-550px, -150px);*/
+    /*display: none;*/
+    z-index: 50;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: absolute;
+    width: 960px;
+    height: 590px;
+}
+.sensitives_areas>div{
+    background: transparent;
+}
+
+.planets>div{
+    opacity: 0.5;
+    position: absolute;
+    z-index: 2;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.planet_1{
+    top: 100px;
+    left: 50px;
+    height: 200px;
+    width: 200px;
+    background-image: url("assets/images/planets/009-saturn.png");
+    animation: planet 50s infinite;
+
+}
+.planet_2{
+    top: 300px;
+    left: 200px;
+    height: 200px;
+    width: 200px;
+    background-image: url("assets/images/planets/010-uranus.png");
+    animation: planet 30s infinite;
+}
+.planet_3{
+    top: 100px;
+    left: 650px;
+    height: 50px;
+    width: 50px;
+    background-image: url("assets/images/planets/011-planet-earth.png");
+    animation: planet 100s infinite;
+}
+.planet_4{
+    top: 400px;
+    left: 600px;
+    height: 50px;
+    width: 50px;
+    background-image: url("assets/images/planets/012-jupiter.png");
+    animation: planet 100s infinite;
+}
+.planet_5{
+    top: 400px;
+    left: 600px;
+    width: 50px;
+    height: 50px;
+    background-image: url("assets/images/planets/008-earth-globe.png");
+    animation: planet 100s infinite;
+}
+
+.fuel-ctn{
+    z-index: 20;
+    position: absolute;
+    top: -10px;
+    right: 0;
+}
+
+.fuel-img{
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 50px;
+    background-size: cover;
+    background-image: url("assets/images/fuel.png");
+    transform: rotate(-45deg);
+}
+
+button{
+    cursor: pointer;
+    font-size: 20px;
+    padding: 7px 20px ;
+    background: white;
+    border: none;
+    border-radius: 10px;
+}
+
+input{
+    padding: 20px;
+    border : none;
+    border-radius: 10px;
+}
+
+.instruction{
+    font-size: 13px;
+}
+
+.paused {
+    animation-play-state: paused !important;
+}
+
+
+@keyframes bounce {
+    0%{
+        transform: translate(10px, 10px);
+    }
+    50%{
+        transform: translate(0px, 0px);
+    }
+    100%{
+        transform: translate(10px, 10px);
+    }
+}
+
+@keyframes planet {
+    0%{
+        transform: translateX(1000px);
+    }
+    50%{
+        transform: translateX(-700px);
+    }
+    100%{
+        transform: translateX(1000px);
+    }
+}

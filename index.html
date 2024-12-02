@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/game.js" defer></script>
+</head>
+<body class="flex-center">
+
+
+<div class="container">
+    <div class="top-bar flex-center">
+        <div class="info-bar flex-center">
+            <img src="assets/logo/logo-02.png" alt="Logo" height="50px">
+            <div class="score-ctn"><span class="score">0</span>pts</div>
+            <div class="time-ctn"><span class="time">00</span>s</div>
+            <button class="mute_btn">Mute</button>
+            <button class="pause_btn">⏸️ Pause</button>
+            <button class="up_font">Up font</button>
+            <button class="less_font">🔽Less font</button>
+            <button class="pause_btn">Less font</button>
+        </div>
+    </div>
+    <div class="game-zone">
+        <div class="planets">
+            <div class="planet_1"></div>
+            <div class="planet_2"></div>
+            <div class="planet_3"></div>
+            <div class="planet_4"></div>
+            <div class="planet_5"></div>
+        </div>
+
+        <div class="my-space-ctn"></div>
+        <div class="asteroids-ctn"></div>
+        <div class="enemy-space-ctn"></div>
+        <div class="friendly-space-ctn"></div>
+        <div class="fuel-ctn"></div>
+        <div class="fuel-fill">
+            <div class="fuel">15</div>
+        </div>
+
+        <div class="sensitives_areas">
+            <div id="TL"></div>
+            <div id="TR"></div>
+            <div id="BR"></div>
+            <div id="BL"></div>
+        </div>
+
+        <div class="game_over flex-center">
+            <p>🎯 Game Over !</p>
+            <input type="text" placeholder="Your name">
+            <button disabled>
+                Continue
+            </button>
+            <button class="restart_game">
+                🔄 Start Game
+            </button>
+        </div>
+        <div class="pause flex-center">
+            <button class="stop_pause_btn">
+                ⏯️ Play
+            </button>
+        </div>
+
+        <div class="welcome flex-center">
+            <img src="assets/logo/logo-02.png" alt="">
+            <p>STAR BATTLE</p>
+            <p class="instruction">
+                How to Play Star Battle.<br>
+
+                1. Move the spaceship using the sensible areas in the screen;<br>
+                2. The timer present the time lapsed;<br>
+                3. The fuel counter show the remain fuel;<br>
+                4. During the flight, the spaceship needs to destroy the asteroids and enemy spaceships that are
+                presented in the space;<br>
+                5. You can shoot pressing Space Bar;<br>
+                6. If the spaceship hits a asteroid or another spaceship, you lose 15 points of fuel;<br>
+                7. Enemy spaceship needs 1 shot to be destroyed, you will get 5 points for each enemy destroyed;<br>
+                8. Asteroid needs 2 shots to be destroyed, you will get 10 points for each asteroid destroyed;<br>
+                9. If you destroy a friendly spaceship, you lose 10 points;<br>
+                10. During the flight, the spaceship needs to collect fuel in the space;<br>
+                11. You can pause the game clicking in a button pause, or pressing the letter "p";<br>
+                12. Go beyond all limits;<br>
+                Battle in Space with Star Battle Championship...<br>
+            </p>
+            <button class="start_game">⏯️ Start Game</button>
+        </div>
+    </div>
+
+
+</div>
+
+<audio src="assets/sound/shoot.mp3" id="shoot_song"></audio>
+<audio src="assets/sound/background.mp3" id="repeat_song" loop></audio>
+<audio src="assets/sound/destroyed.mp3" id="destroy_song"></audio>
+
+</body>
+</html>
